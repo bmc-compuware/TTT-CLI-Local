@@ -9,59 +9,43 @@ on:
       hciconnection:
         # Host/IP adress input from users
         description: HCI Connection
-        default: "CW13.bmc.com:16196"
+        default: "CW13.bmc.com"
         required: true
-      passticket:
+      port:
         # passticket input from the user.
-        description: Pass Ticket
-        default: "passticket"
+        description: Port
+        default: "16196"
         required: true
-      testLocationPath:
+      testFolderPath:
         # passticket input from the user.
         description: Test Location Path
-        default: "C:\\actions-runner\\_work\\Topaz_Workbench_CLI_Test\\Topaz_Workbench_CLI_Test\\CLI_CWKTCOBX\\Tests\\"
+        default: "C:\\Users\\aasati\\Compuware\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
         required: true
-      configration:
-        # passticket input from the user.
-        description: Configration
-        default: "C:\\actions-runner\\_work\\Topaz_Workbench_CLI_Test\\Topaz_Workbench_CLI_Test\\TotalTestConfiguration"
+      workspace:
+        # Workspcae location of the customer input from the user.
+        description: Customized Workspace
+        default: "C:\\Users\\aasati\\git\\TTT\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
+        required: true        
+      repository_server:
+        # repository server input from the user.
+        description: Repository Server
+        default: "http://vw-dtw-xat-01.adprod.bmc.com:48231/totaltestapi/"
         required: true
-
+        
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    #runs-on: self-hosted
-   # runs-on: [self-hosted, ubuntu-latest]
-    runs-on: windows-latest
-
+    runs-on: self-hosted
+    #runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - run: git config --global core.longpaths true
       - name: Check HCI input value
-        run: echo {{github.event.inputs.hciconnection}}
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          clean: false
-          path: ${{ github.workspace }}
-          name: ${{ env.VERSION_MAJOR }}.${{ env.VERSION_MINOR }}
-
+        run: echo "${{ inputs.hciconnection }}"
+     
       # Runs a single command using the runners shell
       - name: Calling the CLI function
-      #  run: cmd .\ExecuteCommand.bat
-     #   run: cmd .\TotalTestFTCLI.bat -e ${{github.event.inputs.hciconnection}} ^ -${{github.event.inputs.passticket}} ^ -f ${{github.event.inputs.testLocationPath}} ^ -R -g TTTReport -G -v 6 -l CLI ^ -log DEBUG ^ -cfgdir ${{github.event.inputs.configration}}
-        run: .\ExecuteCommand.bat -e ${{github.event.inputs.hciconnection}} ^ -${{github.event.inputs.passticket}} ^ -f ${{github.event.inputs.testLocationPath}} ^ -R -g TTTReport -G -v 6 -l CLI ^ -log DEBUG ^ -cfgdir ${{github.event.inputs.configration}} 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "pinaka0" -p "fresp0rt" -s "${{ inputs.repository_server }}" -cesu "pinaka0" -cesp "fresp0rt" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
+     
