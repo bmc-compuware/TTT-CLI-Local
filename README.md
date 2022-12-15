@@ -5,13 +5,13 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 # Table of Contents
 
   * TTT-CLI-Local
-    * [Table of Contents](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#Table%20of%20Contents)
-    * [Usage](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#Usage)
-    * [Inputs](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#Inputs)
-    * [Outputs](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#Outputs)
-    * [Troubleshooting](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#Troubleshooting)
-    * [License summary](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#License%20summary)
-    * [Limitation](https://github.com/akasati02/Topaz_Workbench_CLI_Test/#Limitation)
+    * [Table of Contents](https://github.com/aasat/TTT-CLI-Local/#Table%20of%20Contents)
+    * [Usage](https://github.com/aasat/TTT-CLI-Local/#Usage)
+    * [Inputs](https://github.com/aasat/TTT-CLI-Local/#Inputs)
+    * [Outputs](https://github.com/aasat/TTT-CLI-Local/#Outputs)
+    * [Troubleshooting](https://github.com/aasat/TTT-CLI-Local/#Troubleshooting)
+    * [License summary](https://github.com/aasat/TTT-CLI-Local/#License%20summary)
+    * [Limitation](https://github.com/aasat/TTT-CLI-Local/#Limitation)
 
 # Usage
 
@@ -21,6 +21,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
                     branches: ["xxxxxx"]
           pull_request:
                     branches: ["xxxxx"]
+          #Allows you to run this workflow manually from the Actions tab
           workflow_dispatch:
           #A workflow run is made up of one or more jobs that can run sequentially or in parallel
           jobs:
@@ -40,7 +41,8 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
           #Runs a single command using the runners shell
           - name: Calling the CLI function
-          run: .\ExecuteCommand.bat
+          run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "pinaka0" -p "fresp0rt" -s "${{ inputs.repository_server }}" -cesu "pinaka0" -cesp "fresp0rt" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
+     
  
 # Inputs
 
@@ -48,9 +50,12 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 | Input name | Required | Description |
 | --- | --- | --- |
 | hciconnection | Required  | HCI connection required to connect the system |
-| passticket  | Required  | passticket reuired to run the CLI |
-| testLocationPath | Required  | testLocationPath is your local path where you tes cases being executed |
-| configration  | Required  | configration is required for local testing |
+| port  | Required  | port reuired to run the CLI |
+| testFolderPath | Required  | testFolderPath is your local path where you test cases being executed |
+| workspace  | Required  | workspace is required for local setup |
+| repository_server  | Required  | Repository server is required to connect and get the data from the server |
+| User id  | Required  | LPAR user id required for connection |
+| Password  | Required  | Password is required for connection |
 
 
 # Outputs
