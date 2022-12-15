@@ -1,4 +1,4 @@
-name: TTT-CLI-Local-Test-Scenario
+name: TTT-CLI-Local
 description: 'Execute a scenario using the CLI'
 branding:
   icon:  upload-cloud
