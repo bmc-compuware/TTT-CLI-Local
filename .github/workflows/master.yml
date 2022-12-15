@@ -31,6 +31,16 @@ on:
         description: Repository Server
         default: "http://vw-dtw-xat-01.adprod.bmc.com:48231/totaltestapi/"
         required: true
+      userId:
+        # repository server input from the user.
+        description: HCI User ID
+        default: ""
+        required: true
+      password:
+        # repository server input from the user.
+        description: HCI password
+        default: ""
+        required: true
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,11 +51,8 @@ jobs:
     #runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: git config --global core.longpaths true
-      - name: Check HCI input value
-        run: echo "${{ inputs.hciconnection }}"
-     
+      - run: git config --global core.longpaths true     
       # Runs a single command using the runners shell
       - name: Calling the CLI function
-        run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "pinaka0" -p "fresp0rt" -s "${{ inputs.repository_server }}" -cesu "pinaka0" -cesp "fresp0rt" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
+        run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ inputs.password }}" -s "${{ inputs.repository_server }}" -cesu "${{ inputs.userId }}" -cesp "${{ inputs.password }}" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
      
