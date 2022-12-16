@@ -6,12 +6,18 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
   * TTT-CLI-Local
     * [Table of Contents](https://github.com/aasat/TTT-CLI-Local/#Table%20of%20Contents)
+    * [Prerequisite](https://github.com/aasat/TTT-CLI-Local/#Prerequisite)
     * [Usage](https://github.com/aasat/TTT-CLI-Local/#Usage)
     * [Inputs](https://github.com/aasat/TTT-CLI-Local/#Inputs)
     * [Outputs](https://github.com/aasat/TTT-CLI-Local/#Outputs)
     * [Troubleshooting](https://github.com/aasat/TTT-CLI-Local/#Troubleshooting)
     * [License summary](https://github.com/aasat/TTT-CLI-Local/#License%20summary)
     * [Limitation](https://github.com/aasat/TTT-CLI-Local/#Limitation)
+
+# Prerequisite
+
+ * You can host your own runners and customize the environment used to run jobs in your GitHub Actions workflows, Click [here](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners).
+ * User need to setup Topaz workbench CLI into local system.
 
 # Usage
 
