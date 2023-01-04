@@ -3,7 +3,7 @@ name: Topaz for Total Test for input values
 
 # Controls when the workflow will run
 on:
-env:
+ env:
   DAY_OF_WEEK: Monday
   
 # Allows you to run this workflow manually from the Actions tab
