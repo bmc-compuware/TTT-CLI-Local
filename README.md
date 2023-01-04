@@ -15,7 +15,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
     * [Outputs](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Outputs)
     * [Troubleshooting](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Troubleshooting)
     * [License summary](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#License%20summary)
-    * [Product Assistance](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Limitation)
+    * [Product Assistance](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Product%20Assistance)
 
 # Prerequisite
 
