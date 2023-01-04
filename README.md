@@ -58,13 +58,13 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
 | Input name | Required | Description |
 | --- | --- | --- |
-| hciconnection | Required  | HCI connection required to connect the system |
-| port  | Required  | port reuired to run the CLI |
-| testFolderPath | Required  | testFolderPath is your local path where you test cases being executed |
+| HCI Connection | Required  | HCI connection required to connect the MF system |
+| HCI Connection Port  | Required  | HCI connection port is required to connect the system |
+| Test Location Path | Required  | Test location path is your local path where you test cases being executed |
 | workspace  | Required  | workspace is required for local setup |
 | repository_server  | Required  | Repository server is required to connect and get the data from the server |
-| User id  | Required  | LPAR user id required for connection |
-| Password  | Required  | Password is required for connection |
+| User ID  | Required  | Provide your Mainframe User ID |
+| Password  | Required  | Provide your Mainframe Password |
 
 
 # Outputs
