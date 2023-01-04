@@ -9,7 +9,7 @@ on:
       hciconnection:
         # Host/IP adress input from users
         description: HCI Connection
-        default: "CW13.bmc.com"
+        default: ""
         required: true
       port:
         # passticket input from the user.
@@ -19,17 +19,17 @@ on:
       testFolderPath:
         # passticket input from the user.
         description: Test Location Path
-        default: "C:\\Users\\aasati\\Compuware\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
+        default: ""
         required: true
       workspace:
         # Workspcae location of the customer input from the user.
         description: Customized Workspace
-        default: "C:\\Users\\aasati\\git\\TTT\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
+        default: ""
         required: true        
       repository_server:
         # repository server input from the user.
         description: Repository Server
-        default: "http://vw-dtw-xat-01.adprod.bmc.com:48231/totaltestapi/"
+        default: ""
         required: true
       userId:
         # repository server input from the user.
