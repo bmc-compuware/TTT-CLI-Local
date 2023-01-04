@@ -3,6 +3,9 @@ name: Topaz for Total Test for input values
 
 # Controls when the workflow will run
 on:
+env:
+  DAY_OF_WEEK: Monday
+  
 # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -53,7 +56,7 @@ jobs:
     steps:
       - run: git config --global core.longpaths true     
       # Runs a single command using the runners shell
-      - run: echo "${{ env.HCI_PASSWORD }}"
+      - run: echo $DAY_OF_WEEK!
       - name: Calling the CLI function
         run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ env.HCI_PASSWORD }}" -s "${{ inputs.repository_server }}" -cesu "${{ inputs.userId }}" -cesp "${{ env.HCI_PASSWORD }}" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
      
