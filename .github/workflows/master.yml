@@ -14,7 +14,7 @@ on:
       port:
         # passticket input from the user.
         description: Port
-        default: "16196"
+        default: ""
         required: true
       testFolderPath:
         # passticket input from the user.
@@ -23,7 +23,7 @@ on:
         required: true
       workspace:
         # Workspcae location of the customer input from the user.
-        description: Customized Workspace
+        description: CLI path
         default: ""
         required: true        
       repository_server:
