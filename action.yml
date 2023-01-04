@@ -1,5 +1,5 @@
-name: Total Test
-description: 'Execute a scenario using the CLI'
+name: Total test
+description: 'Total Test'
 branding:
   icon:  upload-cloud
   color: orange
