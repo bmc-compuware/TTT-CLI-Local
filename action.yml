@@ -1,4 +1,4 @@
-name: Topaz For Total Test
+name: Total Test
 description: 'Execute a scenario using the CLI'
 branding:
   icon:  upload-cloud
