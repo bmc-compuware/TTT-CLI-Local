@@ -51,13 +51,13 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
     env:
-     DAY_OF_WEEK: Monday
+     HCI_PASSWORD: ${{ inputs.password }}
     #runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - run: git config --global core.longpaths true     
       # Runs a single command using the runners shell
-      - run: echo "${{ env.DAY_OF_WEEK }}"
+      - run: echo "${{ env.HCI_PASSWORD }}"
       - name: Calling the CLI function
         run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ env.HCI_PASSWORD }}" -s "${{ inputs.repository_server }}" -cesu "${{ inputs.userId }}" -cesp "${{ env.HCI_PASSWORD }}" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
      
