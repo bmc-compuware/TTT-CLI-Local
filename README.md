@@ -8,14 +8,14 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 # Table of Contents
 
   * TTT-CLI-Local
-    * [Table of Contents](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Table%20of%20Contents)
-    * [Prerequisite](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Prerequisite)
-    * [Usage](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Usage)
-    * [Inputs](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Inputs)
-    * [Outputs](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Outputs)
-    * [Troubleshooting](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Troubleshooting)
-    * [License summary](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#License%20summary)
-    * [Product Assistance](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Product%20Assistance)
+    * [Table of Contents](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Table%20of%20Contents)
+    * [Prerequisite](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Prerequisite)
+    * [Usage](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Usage)
+    * [Inputs](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Inputs)
+    * [Outputs](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Outputs)
+    * [Troubleshooting](https://github.com/marketplace/bmc-ami-devx-total-test/#Troubleshooting)
+    * [License summary](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#License%20summary)
+    * [Product Assistance](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Product%20Assistance)
 
 # Prerequisite
 
