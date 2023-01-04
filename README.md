@@ -21,36 +21,12 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
  * You can host your own runners and customize the environment used to run jobs in your GitHub Actions workflows, Click [here](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners).
  * User need to setup Topaz workbench CLI into local system.
+ * User has to setup the MF password in github repository with the following steps
+   * Settings-> Secrets-> Actions-> New repository secret
 
 # Usage
 
-          #Triggers the workflow on push or pull request events but only for the "xxxxx" branch that may be main, master or your feature branch
-
-          push:<br>
-                    branches: ["xxxxxx"]
-          pull_request:
-                    branches: ["xxxxx"]
-          #Allows you to run this workflow manually from the Actions tab
-          workflow_dispatch:
-          #A workflow run is made up of one or more jobs that can run sequentially or in parallel
-          jobs:
-          #This workflow contains a single job called "build"
-          build:
-          #The type of runner that the job will run on
-          runs-on: self-hosted    
-          #Steps represent a sequence of tasks that will be executed as part of the job
-          steps:
-          - run: git config --global core.longpaths true
-          #Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-          - uses: actions/checkout@v2
-          with:
-          clean: false
-          path: ${{ github.workspace }}
-          name: ${{ env.VERSION_MAJOR }}.${{ env.VERSION_MINOR }}
-
-          #Runs a single command using the runners shell
-          - name: Calling the CLI function
-          run: C:\\Topaz\\topazworkbenchcli.20.12.03.134\\TotalTestFTCLI.bat -data "${{ inputs.workspace }}" -host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "pinaka0" -p "fresp0rt" -s "${{ inputs.repository_server }}" -cesu "pinaka0" -cesp "fresp0rt" -f "${{ inputs.testFolderPath }}" -R -G -v "6" -l "jenkins" -loglevel "info"
+          
      
  
 # Inputs
