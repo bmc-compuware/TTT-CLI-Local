@@ -1,6 +1,9 @@
-# TTT-CLI-Local
+# Overview
+BMC Compuware Topaz for Total Test Auto Run is the extension which can be used to execute the Unit test or functional test scenarios automatically when a pipeline is started. 
 
-The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a workflow in your instance of BMC Compuware where you want to execute scenario based on you program. This action can be used in scenarios where your test scenario source is stored in Git, or when you want your GitHub Actions workflow to operate on source that is already stored in your local workspaces. <br>
+# BMC AMI DevX Total Test
+
+The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a workflow in your instance of BMC Compuware where you want to execute scenario based on you program. This action can be used in scenarios where a test scenario source is stored in Git, or when you want your GitHub Actions workflow to operate on source that is already stored in your local workspaces. <br>
           
 # Table of Contents
 
@@ -12,7 +15,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
     * [Outputs](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Outputs)
     * [Troubleshooting](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Troubleshooting)
     * [License summary](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#License%20summary)
-    * [Limitation](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Limitation)
+    * [Product Assistance](https://github.com/marketplace/actions/ttt-cli-local-test-scenario/#Limitation)
 
 # Prerequisite
 
@@ -66,7 +69,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
 # Outputs
 
-Output will saved in testlocationpath in your local system.
+Output will saved in Output folder created under Test Location Path in your local system.
 
 # Troubleshooting
 
@@ -74,9 +77,38 @@ To enable debug logging in your GitHub actions workflow, see the guide [here](ht
 
 # License summary
 
-This code is made available under the MIT license.
+This code is made available under the BMC license.
 
-# Limitation
+# Product Assistance
+
+BMC provides assistance for customers with its documentation, the BMC Support Center web site, and telephone customer support.
+
+### BMC Support Center
+
+You can access online information for BMC products via our Support Center site at [https://support.bmc.com](https://support.bmc.com/). Support Center provides access to critical information about your BMC products. You can review frequently asked questions, read or download documentation, access product fixes, or e-mail your questions or comments. The first time you access Support Center, you must register and obtain a password. Registration is free.
+
+### Contacting Customer Support
+
+At BMC, we strive to make our products and documentation the best in the industry. Feedback from our customers helps us maintain our quality standards. If you need support services, please obtain the following information before calling BMC\'s 24-hour telephone support:
+
+- The Azure pipeline job output that contains any error messages or pertinent information.
+
+- The name, release number, and build number of your product. This information is displayed in the installed extensions page. Apply filter: BMC in order to display all of the installed BMC extension.
+
+- Environment information, such as the operating system and release on which the Topaz CLI is installed.
+
+You can contact BMC in one of the following ways:
+
+
+#### Web
+
+You can report issues via BMC Support Center: [https://support.bmc.com](https://support.bmc.com/).
+
+Note: Please report all high-priority issues by phone.
+
+### Corporate Web Site
+
+To access BMC site on the Web, go to [https://www.bmc.com/](https://www.bmc.com/). The BMC site provides a variety of product and support information.
 
 
    
