@@ -3,7 +3,7 @@ BMC Compuware Topaz for Total Test Auto Run is the extension which can be used t
 
 # BMC AMI DevX Total Test
 
-The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a workflow in your instance of BMC Compuware where you want to execute scenario based on you program. This action can be used in scenarios where a test scenario source is stored in Git, or when you want your GitHub Actions workflow to operate on source that is already stored in your local workspaces. <br>
+The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a workflow in your instance of BMC Compuware where you want to execute scenario based on you program. This action can be used in scenarios where a test scenario source is stored in Git, or when you want a GitHub Actions workflow to operate on source that is already stored in your local workspaces. <br>
           
 # Table of Contents
 
@@ -22,7 +22,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
  * You can host your own runners and customize the environment used to run jobs in your GitHub Actions workflows, Click [here](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners).
  * User need to setup Topaz workbench CLI into local system.
  * User has to setup the MF password in github repository with the following steps
-   * Settings-> Secrets-> Actions-> New repository secret
+   * "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret
 
 # Usage
 
@@ -40,7 +40,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 | workspace  | Required  | workspace is required for local setup |
 | repository_server  | Required  | Repository server is required to connect and get the data from the server |
 | User ID  | Required  | Provide your Mainframe User ID |
-| Password  | Required  | Provide your Mainframe Password |
+| Password  | Required  | "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret |
 
 
 # Outputs
