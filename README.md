@@ -26,7 +26,18 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
 # Usage
 
-          
+ #Triggers the workflow to execute the provided test scenario on any pipeline where the BMC Compuware Topaz for Total Test Auto Run is added.
+ 
+    * Steps to use the extension
+      * Install the Topaz workbench CLI into local system, Click [here](https://download.api.compuware.com/web/private/66jvM2Rf5dcHtVjXdYhudGtRn9CtHzYq/test-management/results.html).
+      * CLI Execution path - Go to the local drive of a system and check the .bat file location i.e "C:\\Topaz\\topazworkbenchcli.20.12.03.134\\".
+      * HCI Connection - Provide the HCI connection i.e CW01.bmc.com
+      * Port - Provide the HCI connection port number i.e 16196
+      * Test Location Path - Test location path is your local path where you test cases being executed i.e    "C:\\Users\\your_username\\Compuware\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
+      * CLI path - Provide the CLI path where a workspace available i.e. "C:\\Users\\your_username\\git\\TTT\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
+      * Repository server - Provide the repository server location i.e. "http://vw-dtw-xat-01.adprod.bmc.com:48231/totaltestapi/"
+      * HCI user id - Provide you user id which can connect to MF
+      * Password - Configure you MF password in "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret
      
  
 # Inputs
@@ -34,6 +45,7 @@ The TTT-Scenario-Execute action allows your GitHub Actions workflow to trigger a
 
 | Input name | Required | Description |
 | --- | --- | --- |
+| CLI Execution path | Required  | CLI execution path is the location where it is installed locally, provide path till .bat folder  |
 | HCI Connection | Required  | HCI connection required to connect the MF system |
 | HCI Connection Port  | Required  | HCI connection port is required to connect the system |
 | Test Location Path | Required  | Test location path is your local path where you test cases being executed |
