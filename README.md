@@ -64,7 +64,7 @@ To enable debug logging in your GitHub actions workflow, see the guide [here](ht
 
 # License summary
 
-This code is made available under the BMC license.
+This code is made available under the BMC license, Click [here](https://github.com/bmc-compuware/TTT-CLI-Local/blob/main/LICENSE.txt).
 
 # Product Assistance
 
