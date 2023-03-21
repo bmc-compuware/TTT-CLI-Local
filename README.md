@@ -1,5 +1,5 @@
 # Overview
-The BMC Compuware Topaz for Total Test extension can be used to execute either Unit or Functional test scenarios automatically. 
+The BMC AMI DevX Total Test extension can be used to execute either Unit or Functional test scenarios automatically. 
 
 # BMC AMI DevX Total Test
 
@@ -26,13 +26,13 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 
 # Usage
 
-* Triggers the workflow to execute the provided test scenario on any pipeline where the BMC Compuware Topaz for Total Test Auto Run is added. 
+* Triggers the workflow to execute the provided test scenario on any pipeline where the BMC AMI DevX Total Test Auto Run is added. 
 * Steps to use the extension
   * Install the Topaz workbench CLI into local system, Click [here](https://download.api.compuware.com/web/private/66jvM2Rf5dcHtVjXdYhudGtRn9CtHzYq/test-management/results.html).
   * CLI Execution path - Go to the local drive of a system and check the .bat file location i.e "C:\\Topaz\\topazworkbenchcli.20.12.03.134\\".
   * HCI Connection - Provide the HCI connection i.e CW01.bmc.com
   * Port - Provide the HCI connection port number i.e 16196
-  * Test Location Path - Test location path is your local path where you test cases being executed i.e    "C:\\Users\\your_username\\Compuware\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
+  * Test Location Path - Test location path is your local path where you test cases being executed i.e    "C:\\Users\\your_username\\BMC\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
   * CLI path - Provide the CLI path where a workspace available i.e. "C:\\Users\\your_username\\git\\TTT\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
   * Repository server - Provide the repository server location i.e. "http://vw-dtw-xat-01.adprod.bmc.com:48231/totaltestapi/"
   * HCI user id - Provide you user id which can connect to MF
