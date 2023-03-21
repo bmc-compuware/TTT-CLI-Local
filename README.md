@@ -20,7 +20,7 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 # Prerequisite
 
  * You can host your own runners and customize the environment used to run jobs in your GitHub Actions workflows, Click [here](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners).
- * User need to setup Topaz workbench CLI into local system.
+ * User need to setup BMC AMI DevX workbench CLI into local system.
  * User has to setup the MF password in github repository with the following steps
    * "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret
 
@@ -28,8 +28,8 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 
 * Triggers the workflow to execute the provided test scenario on any pipeline where the BMC AMI DevX Total Test Auto Run is added. 
 * Steps to use the extension
-  * Install the Topaz workbench CLI into local system, Click [here](https://download.api.compuware.com/web/private/66jvM2Rf5dcHtVjXdYhudGtRn9CtHzYq/test-management/results.html).
-  * CLI Execution path - Go to the local drive of a system and check the .bat file location i.e "C:\\Topaz\\topazworkbenchcli.20.12.03.134\\".
+  * Install the BMC AMI DevX workbench CLI into local system, Click [here](https://download.api.compuware.com/web/private/66jvM2Rf5dcHtVjXdYhudGtRn9CtHzYq/test-management/results.html).
+  * CLI Execution path - Go to the local drive of a system and check the .bat file location i.e "C:\\BMC AMI DevX\\topazworkbenchcli.20.12.03.134\\".
   * HCI Connection - Provide the HCI connection i.e CW01.bmc.com
   * Port - Provide the HCI connection port number i.e 16196
   * Test Location Path - Test location path is your local path where you test cases being executed i.e    "C:\\Users\\your_username\\BMC\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
