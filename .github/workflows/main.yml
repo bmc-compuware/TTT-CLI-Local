@@ -1,0 +1,4 @@
+- name: BMC AMI DevX Total Test
+  # You may pin to the exact commit or the version.
+  # uses: bmc-compuware/TTT-CLI-Local@24716ed28b4ae897240745e2d736ac7796dcd700
+  uses: bmc-compuware/TTT-CLI-Local@V1.3
